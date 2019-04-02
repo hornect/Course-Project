@@ -97,16 +97,43 @@ Multi-Purposful instant messanger, contact anyone on your campus, schedule organ
       - (Read/GET) User Searching Query
         ''' swift
         let query = PFQuery (className:"Directory")
+        query.whereKey("Student" ,equalTo:searchedStudents
+        query.order(byDescending: "Alphabetical")
+        query.findObjectsInBackground { (Students: [PFuser]?, error:Error?) in 
+          if let error = error {
+            print (error.localizedDescription)
+            } else if let user = Student {
+               print("Successfully retrieved")
+            }
+         }
         '''
       - Default Chat
         -(Read/GET) Default Chat based on major
           ''' swift
           let query = PFQuery(className:"Major")
+          query.whereKey("Major" , equalTo:searchedMajor
+          query.order(byDescending: "Alphabetical")
+          query.findObjectsInBackground { (Major: [PFObject]?, error:Error?) in 
+          if let error = error {
+            print (error.localizedDescription)
+            } else if let DegreePath = Major {
+               print("Successfully retrieved")
+            }
+         }
           '''
       - Chatroom Search
         -(Read/GET) Group Chat look up
           '''swift
           Let query = PFQuery(className:"ChatLabel")
+          query.whereKey("Chats" ,equalTo:searchedChat
+          query.order(byDescending: "Alphabetical")
+          query.findObjectsInBackground { (Chat: [PFObject]?, error:Error?) in 
+          if let error = error {
+            print (error.localizedDescription)
+            } else if let Chatroom = ChatLabel {
+               print("Successfully retrieved")
+            }
+         }
           '''
 #### Existing API Endpoints
 ##### Parse
