@@ -1,0 +1,6 @@
+framework module Pods_HornectTests {
+  umbrella header "Pods-HornectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
