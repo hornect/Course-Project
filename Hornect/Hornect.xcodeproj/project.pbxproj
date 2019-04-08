@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51A0B047D9A183E22A7C7128 /* Pods_HornectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B277B99A7017A6D350F41D /* Pods_HornectTests.framework */; };
 		564FA4692AE42F52E7A6977A /* Pods_Hornect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333CC5B9956D24B131C0D4FD /* Pods_Hornect.framework */; };
+		81C454ED225BF5980013A86F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C454EC225BF5980013A86F /* SignUpViewController.swift */; };
 		81E89C08225A24A600FB3E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E89C07225A24A600FB3E07 /* AppDelegate.swift */; };
 		81E89C0D225A24A600FB3E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E89C0B225A24A600FB3E07 /* Main.storyboard */; };
 		81E89C0F225A24A700FB3E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E89C0E225A24A700FB3E07 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		333CC5B9956D24B131C0D4FD /* Pods_Hornect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hornect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482F23F9D2D8BF21FBC3DBE6 /* Pods-HornectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HornectUITests.debug.xcconfig"; path = "Target Support Files/Pods-HornectUITests/Pods-HornectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B344040B116BBD1BA00B36E /* Pods-HornectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HornectTests.release.xcconfig"; path = "Target Support Files/Pods-HornectTests/Pods-HornectTests.release.xcconfig"; sourceTree = "<group>"; };
+		81C454EC225BF5980013A86F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81E89C04225A24A600FB3E07 /* Hornect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hornect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E89C07225A24A600FB3E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E89C0C225A24A600FB3E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				81E89C10225A24A700FB3E07 /* LaunchScreen.storyboard */,
 				81E89C13225A24A700FB3E07 /* Info.plist */,
 				81E89C35225A34D900FB3E07 /* LoginViewController.swift */,
+				81C454EC225BF5980013A86F /* SignUpViewController.swift */,
 			);
 			path = Hornect;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C454ED225BF5980013A86F /* SignUpViewController.swift in Sources */,
 				81E89C36225A34D900FB3E07 /* LoginViewController.swift in Sources */,
 				81E89C08225A24A600FB3E07 /* AppDelegate.swift in Sources */,
 			);

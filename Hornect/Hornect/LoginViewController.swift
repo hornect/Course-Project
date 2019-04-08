@@ -24,7 +24,14 @@ class LoginViewController: UIViewController {
         let email = emailField.text!
         let password = passwordFeild.text!
         //assigning input feilds to vars.
-
+        PFUser.logInWithUsername(inBackground: email, password: password)
+        {(user, Error) in
+            if user != nil{
+                
+            }else {
+                print ("Error: \(Error?.localizedDescription)")
+            }
+        }
     }
     
     /*
