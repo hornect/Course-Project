@@ -13,8 +13,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var FNameLabel: UITextField!
     @IBOutlet weak var LNameLabel: UITextField!
     @IBOutlet weak var EmailLabel: UITextField!
-    @IBOutlet weak var ClassLabel: UITextField!
-    @IBOutlet weak var MajorLabel: UITextField!
+    @IBOutlet weak var UsernameLabel: UITextField!
+    @IBOutlet weak var PasswordLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class SignUpViewController: UIViewController {
         let user = PFUser()
         let Fname = FNameLabel.text!
         let LName = LNameLabel.text!
-        let Class = ClassLabel.text!
-        let Major = MajorLabel.text!
+        let Username = UsernameLabel.text!
+        let Password = PasswordLabel.text!
         let Email = EmailLabel.text!
         user.signUpInBackground{(sucess,error) in
             if sucess{
-                
+                self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
             }

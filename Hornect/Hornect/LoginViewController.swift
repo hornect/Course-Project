@@ -11,7 +11,7 @@ import Parse
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var UserNameField: UITextField!
     @IBOutlet weak var passwordFeild: UITextField!
     
     override func viewDidLoad() {
@@ -21,13 +21,13 @@ class LoginViewController: UIViewController {
     }
     @IBAction func onLogin(_ sender: Any) {
         let user = PFUser()
-        let email = emailField.text!
+        let username = UserNameField.text!
         let password = passwordFeild.text!
         //assigning input feilds to vars.
-        PFUser.logInWithUsername(inBackground: email, password: password)
+        PFUser.logInWithUsername(inBackground: username, password: password)
         {(user, Error) in
-            if user != nil{
-                
+            if user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }else {
                 print ("Error: \(Error?.localizedDescription)")
             }
