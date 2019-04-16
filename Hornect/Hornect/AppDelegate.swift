@@ -10,23 +10,22 @@ import UIKit
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) ->
-        Bool {
-            // Override point for customization after application launch.
-            Parse.setApplicationId("APP_ID",clientKey: "CLIENT_KEY")
-            let configuration = ParseClientConfiguration{
-                $0.applicationId = "myAppId"
-                $0.clientKey = "myMasterKey"
-                $0.server = "https://hornect.herokuapp.com/parse"
-            }
-    
-
-            return true 
+        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Initialize Parse
+        // Set applicationId and server based on the values in the Heroku settings.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "hornect"
+                configuration.server = "https://hornect.herokuapp.com/parse"
+            })
+        )
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -53,4 +52,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

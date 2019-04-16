@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
         user.username = usernameFeild.text!
         user.password = passwordFeild.text!
         user.signUpInBackground{(sucess,error) in
-            if error != nil{
+            if sucess{
                 self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
