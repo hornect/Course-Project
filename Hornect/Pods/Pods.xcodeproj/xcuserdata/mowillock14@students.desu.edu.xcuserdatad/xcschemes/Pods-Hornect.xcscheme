@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "97A84D2F409393950710169B2B696528"
+               BlueprintIdentifier = "C490813C454E55EE6106DB1AEC3CC21C"
                BuildableName = "Pods_Hornect.framework"
                BlueprintName = "Pods-Hornect"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "97A84D2F409393950710169B2B696528"
+            BlueprintIdentifier = "C490813C454E55EE6106DB1AEC3CC21C"
             BuildableName = "Pods_Hornect.framework"
             BlueprintName = "Pods-Hornect"
             ReferencedContainer = "container:Pods.xcodeproj">

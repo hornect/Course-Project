@@ -6,7 +6,8 @@ target 'Hornect' do
   use_frameworks!
 
   # Pods for Hornect
-	pod 'Parse'
+  pod "Parse/UI"
+  pod "AlamofireImage"
 
   target 'HornectTests' do
     inherit! :search_paths

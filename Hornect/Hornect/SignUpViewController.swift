@@ -8,13 +8,12 @@
 
 import UIKit
 import Parse
+
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var FNameLabel: UITextField!
-    @IBOutlet weak var LNameLabel: UITextField!
-    @IBOutlet weak var EmailLabel: UITextField!
-    @IBOutlet weak var UsernameLabel: UITextField!
-    @IBOutlet weak var PasswordLabel: UITextField!
+    @IBOutlet weak var emailFeild: UITextField!
+    @IBOutlet weak var usernameFeild: UITextField!
+    @IBOutlet weak var passwordFeild: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +22,11 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func onSignup(_ sender: Any) {
         let user = PFUser()
-        let Fname = FNameLabel.text!
-        let LName = LNameLabel.text!
-        let Username = UsernameLabel.text!
-        let Password = PasswordLabel.text!
-        let Email = EmailLabel.text!
+        user.email = emailFeild.text!
+        user.username = usernameFeild.text!
+        user.password = passwordFeild.text!
         user.signUpInBackground{(sucess,error) in
-            if sucess{
+            if error != nil{
                 self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
