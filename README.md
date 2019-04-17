@@ -139,6 +139,7 @@ Multi-Purposful instant messanger, contact anyone on your campus, schedule organ
 ##### Parse
 - Base Url - [https://parseplatform.org/Parse-SDK-iOS-OSX/api/] (https://parseplatform.org/Parse-SDK-iOS-OSX/api/)
 
-          
+#### Progress Gif
+<img src="http://g.recordit.co/4V1ZfiRVG3.gif">
        
    
