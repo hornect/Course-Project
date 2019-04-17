@@ -86,8 +86,8 @@
                                 <color key="textColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-ZS-h1g">
-                                <rect key="frame" x="140" y="501" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-ZS-h1g">
+                                <rect key="frame" x="140" y="501" width="85" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign up">
@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8W-MD-Gux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6410.3999999999996" y="-6.746626686656672"/>
+            <point key="canvasLocation" x="5470" y="8"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="0iu-X9-3l9">
@@ -219,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zN-ee-3eT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6423" y="-672"/>
+            <point key="canvasLocation" x="5470" y="-672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="31R-dA-WDq">
@@ -235,20 +235,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAI-LB-EjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5471" y="-672"/>
+            <point key="canvasLocation" x="4622" y="-672"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="0J9-3X-nbk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ed-ps-w1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <splitViewController id="BfX-dx-MUE" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Cm8-Cf-UHH" kind="relationship" relationship="masterViewController" id="D1Y-fF-0LH"/>
                         <segue destination="3OY-fk-vYs" kind="relationship" relationship="detailViewController" id="6xS-aG-tT2"/>
                     </connections>
                 </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ed-ps-w1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4041" y="-518"/>
+            <point key="canvasLocation" x="3407" y="-564"/>
         </scene>
         <!--Login-->
         <scene sceneID="7Ng-06-Sdi">
@@ -329,6 +329,7 @@
                     <connections>
                         <outlet property="UserNameField" destination="VJk-vM-kn9" id="gK1-IP-0fN"/>
                         <outlet property="passwordFeild" destination="U5T-TB-XBb" id="g30-R6-n0s"/>
+                        <segue destination="BfX-dx-MUE" kind="presentation" identifier="LoginSegue" id="SnL-Gq-HCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjH-iA-Pnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,21 +390,135 @@
             </objects>
             <point key="canvasLocation" x="1636" y="194"/>
         </scene>
-        <!--View Controller-->
+        <!--Customize Profile-->
         <scene sceneID="7sn-kg-DLn">
             <objects>
-                <viewController id="Uhr-GU-RzP" sceneMemberID="viewController">
+                <viewController title="Customize Profile" id="Uhr-GU-RzP" customClass="ProfileViewController" customModule="Hornect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xfc-7D-ivb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-Sample" translatesAutoresizingMaskIntoConstraints="NO" id="Ole-DZ-5d9">
+                                <rect key="frame" x="130" y="125" width="115" height="115"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="rrT-Lo-R1E"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="R8P-wb-Jva" appends="YES" id="4Px-Z5-Na6"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tp-KD-Y1x">
+                                <rect key="frame" x="16" y="266" width="80" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxi-ZB-JDn">
+                                <rect key="frame" x="16" y="308" width="78" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPF-Et-hge">
+                                <rect key="frame" x="16" y="354" width="97" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoL-7u-I4h">
+                                <rect key="frame" x="16" y="396" width="49" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUG-Zh-Tj9">
+                                <rect key="frame" x="113" y="308" width="246" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fir-Ij-EWm">
+                                <rect key="frame" x="113" y="266" width="246" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="yIU-jx-m2G"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="given-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojy-7P-07U">
+                                <rect key="frame" x="121" y="354" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="VLB-vB-ryY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-lW-iGc">
+                                <rect key="frame" x="121" y="396" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1C-nS-p6Q">
+                                <rect key="frame" x="156" y="502" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnContinueButton:" destination="Uhr-GU-RzP" eventType="touchUpInside" id="7SC-ek-GgT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.1137254902" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HPF-Et-hge" firstAttribute="top" secondItem="ojy-7P-07U" secondAttribute="top" id="1ss-X7-Ly3"/>
+                            <constraint firstItem="fir-Ij-EWm" firstAttribute="trailing" secondItem="xfc-7D-ivb" secondAttribute="trailingMargin" id="8qZ-Vu-Ses"/>
+                            <constraint firstItem="Ewi-lW-iGc" firstAttribute="trailing" secondItem="ojy-7P-07U" secondAttribute="trailing" id="8sM-I1-iXr"/>
+                            <constraint firstItem="0Tp-KD-Y1x" firstAttribute="leading" secondItem="vxi-ZB-JDn" secondAttribute="leading" id="9IQ-S7-O8L"/>
+                            <constraint firstItem="MUG-Zh-Tj9" firstAttribute="leading" secondItem="fir-Ij-EWm" secondAttribute="leading" id="KZ4-fK-jRK"/>
+                            <constraint firstItem="0Tp-KD-Y1x" firstAttribute="leading" secondItem="xfc-7D-ivb" secondAttribute="leadingMargin" id="Nvh-f2-3fX"/>
+                            <constraint firstItem="vxi-ZB-JDn" firstAttribute="leading" secondItem="HPF-Et-hge" secondAttribute="leading" id="NzM-ue-6cs"/>
+                            <constraint firstItem="Ole-DZ-5d9" firstAttribute="top" secondItem="bDa-dp-Xll" secondAttribute="top" constant="61" id="Q3A-X6-KJb"/>
+                            <constraint firstItem="Ole-DZ-5d9" firstAttribute="centerX" secondItem="xfc-7D-ivb" secondAttribute="centerX" id="SHK-8e-J1U"/>
+                            <constraint firstItem="MUG-Zh-Tj9" firstAttribute="top" secondItem="fir-Ij-EWm" secondAttribute="bottom" constant="12" id="TJ7-gf-QeY"/>
+                            <constraint firstItem="Ewi-lW-iGc" firstAttribute="leading" secondItem="ojy-7P-07U" secondAttribute="leading" id="UeJ-r4-ZHC"/>
+                            <constraint firstItem="Ole-DZ-5d9" firstAttribute="leading" secondItem="bDa-dp-Xll" secondAttribute="leading" constant="130" id="WYZ-OM-0Vk"/>
+                            <constraint firstItem="eoL-7u-I4h" firstAttribute="top" secondItem="Ewi-lW-iGc" secondAttribute="top" id="ZSC-XF-4Du"/>
+                            <constraint firstItem="MUG-Zh-Tj9" firstAttribute="trailing" secondItem="fir-Ij-EWm" secondAttribute="trailing" id="cK4-Ld-EGo"/>
+                            <constraint firstItem="vxi-ZB-JDn" firstAttribute="top" secondItem="MUG-Zh-Tj9" secondAttribute="top" id="gXP-7M-Hey"/>
+                            <constraint firstItem="Ewi-lW-iGc" firstAttribute="top" secondItem="ojy-7P-07U" secondAttribute="bottom" constant="12" id="ifS-eN-oUU"/>
+                            <constraint firstItem="Ewi-lW-iGc" firstAttribute="trailing" secondItem="MUG-Zh-Tj9" secondAttribute="trailing" id="oKo-GN-hZ1"/>
+                            <constraint firstItem="fir-Ij-EWm" firstAttribute="top" secondItem="Ole-DZ-5d9" secondAttribute="bottom" constant="26" id="upy-OK-D19"/>
+                            <constraint firstItem="0Tp-KD-Y1x" firstAttribute="top" secondItem="fir-Ij-EWm" secondAttribute="top" id="xC7-zz-9hM"/>
+                            <constraint firstItem="HPF-Et-hge" firstAttribute="leading" secondItem="eoL-7u-I4h" secondAttribute="leading" id="xK8-KY-XRN"/>
+                            <constraint firstItem="ojy-7P-07U" firstAttribute="top" secondItem="MUG-Zh-Tj9" secondAttribute="bottom" constant="16" id="zc6-kx-wcf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bDa-dp-Xll"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iqV-Mf-Sxs"/>
+                    <navigationItem key="navigationItem" title="Profile" id="iqV-Mf-Sxs"/>
+                    <connections>
+                        <outlet property="ClassLabel" destination="ojy-7P-07U" id="Ibn-Zy-5K4"/>
+                        <outlet property="FNameLabel" destination="fir-Ij-EWm" id="yiW-Do-xp9"/>
+                        <outlet property="LNameLabel" destination="MUG-Zh-Tj9" id="gkr-cY-kOA"/>
+                        <outlet property="MajorLabel" destination="Ewi-lW-iGc" id="grc-6k-gXw"/>
+                        <outlet property="imageView" destination="Ole-DZ-5d9" id="2DO-Sw-3ko"/>
+                        <segue destination="BfX-dx-MUE" kind="presentation" identifier="SignedUpSegue" id="DwJ-MF-q65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjs-Q9-ubE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="R8P-wb-Jva">
+                    <connections>
+                        <action selector="onProfileButton:" destination="Uhr-GU-RzP" id="8US-Es-n2M"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4042" y="194"/>
+            <point key="canvasLocation" x="4016.8000000000002" y="193.85307346326837"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="55s-li-Sg8">
@@ -424,4 +539,10 @@
             <point key="canvasLocation" x="3206" y="194"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-Sample" width="193" height="190"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SnL-Gq-HCh"/>
+    </inferredMetricsTieBreakers>
 </document>
