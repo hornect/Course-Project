@@ -17,7 +17,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var LNameLabel: UITextField!
     @IBOutlet weak var ClassLabel: UITextField!
     @IBOutlet weak var MajorLabel: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,10 +42,22 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300) //Selecting a graphic size
-        let scaledImage = image.af_imageScaled(to: size) //use alamo to scale image down
+        let scaledImage = image.af_imageScaled(to: size) //use alamo to scale image do/wn
         
         imageView.image = scaledImage //placing scaled image inside of image
+        let imageData = scaledImage.pngData()
         
+        var parseFile = PFFileObject(name: "picker", data: imageData!)
+        let user = PFUser.current()
+        user!["userImage"] = parseFile
+        user!.saveInBackground {
+            (success: Bool, error: Error?) in
+            if (success) {
+                print ("Post Completed")
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
         dismiss(animated: true, completion: nil) //dismiss camera view
     }
     
